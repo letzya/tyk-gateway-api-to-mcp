@@ -41,7 +41,7 @@ This tool creates an MCP server that allows AI assistants to interact with APIs 
       "command": "npx",
       "args": [
         "-y",
-        "@tyktechnologies/api-to-mcp",
+        "@tyk-technologies/api-to-mcp",
         "--spec",
         "https://petstore3.swagger.io/api/v3/openapi.json"
       ],
@@ -65,7 +65,7 @@ You can adjust the `args` array to customize your MCP server with various option
       "command": "npx",
       "args": [
         "-y",
-        "@tyktechnologies/api-to-mcp",
+        "@tyk-technologies/api-to-mcp",
         "--spec",
         "./path/to/your/openapi.json",
         "--overlays",
@@ -96,7 +96,7 @@ You can adjust the `args` array to customize your MCP server with various option
       "command": "npx",
       "args": [
         "-y",
-        "@tyktechnologies/api-to-mcp",
+        "@tyk-technologies/api-to-mcp",
         "--spec",
         "./path/to/your/openapi.json"
       ],
@@ -129,7 +129,7 @@ const mcpClient = await experimental_createMCPClient({
   transport: {
     type: 'stdio',
     command: 'npx', // Command to run the MCP server
-    args: ['-y', '@tyktechnologies/api-to-mcp', '--spec', 'https://petstore3.swagger.io/api/v3/openapi.json'], // OpenAPI spec
+    args: ['-y', '@tyk-technologies/api-to-mcp', '--spec', 'https://petstore3.swagger.io/api/v3/openapi.json'], // OpenAPI spec
     env: {
       // You can set environment variables here
       // API_KEY: process.env.YOUR_API_KEY,
@@ -169,22 +169,22 @@ Configuration is managed via environment variables, command-line options, or a J
 
 ```bash
 # Start with specific OpenAPI spec file
-@tyktechnologies/api-to-mcp --spec=./path/to/openapi.json
+@tyk-technologies/api-to-mcp --spec=./path/to/openapi.json
 
 # Apply overlays to the spec
-@tyktechnologies/api-to-mcp --spec=./path/to/openapi.json --overlays=./path/to/overlay.json,https://example.com/api/overlay.json
+@tyk-technologies/api-to-mcp --spec=./path/to/openapi.json --overlays=./path/to/overlay.json,https://example.com/api/overlay.json
 
 # Include only specific operations (supports glob patterns)
-@tyktechnologies/api-to-mcp --spec=./path/to/openapi.json --whitelist="getPet*,POST:/users/*"
+@tyk-technologies/api-to-mcp --spec=./path/to/openapi.json --whitelist="getPet*,POST:/users/*"
 
 # Specify target API URL
-@tyktechnologies/api-to-mcp --spec=./path/to/openapi.json --targetUrl=https://api.example.com
+@tyk-technologies/api-to-mcp --spec=./path/to/openapi.json --targetUrl=https://api.example.com
 
 # Add custom headers to all API requests
-@tyktechnologies/api-to-mcp --spec=./path/to/openapi.json --headers='{"X-Api-Version":"1.0.0"}'
+@tyk-technologies/api-to-mcp --spec=./path/to/openapi.json --headers='{"X-Api-Version":"1.0.0"}'
 
 # Disable the X-MCP header
-@tyktechnologies/api-to-mcp --spec=./path/to/openapi.json --disableXMcp
+@tyk-technologies/api-to-mcp --spec=./path/to/openapi.json --disableXMcp
 ```
 
 ### Environment Variables

@@ -2,7 +2,7 @@
   "spec": "https://raw.githubusercontent.com/TykTechnologies/tyk/refs/heads/master/swagger.yml",
   "overlays": "./specs/petstore-overlay.json",
   "port": 8080,
-  "targetUrl": "http://tyk-gateway.localhost:8080,
+  "targetUrl": "http://tyk-gateway.localhost:8080",
   "whitelist": "*",
   "headers": {
     "X-Custom-Header": "custom-value",
